@@ -4,8 +4,8 @@
 
 const UPSTREAM_DNS = 'https://dns.google/dns-query';
 const UPSTREAM_JSON = 'https://dns.google/resolve';
-const API_PATH = '/ech'; //您可以自定义path
-const TEST_PATH = '/doh'; //您可以自定义path
+const API_PATH = '/ech'; //返回携带ech的记录
+const TEST_PATH = '/doh'; //纯净无ech转发记录
 
 // --- 静态配置 ---
 const TWITTER_DOMAINS = ["twimg.com", "twitter.com", "x.com", "t.co"]; //您可以添加某域名强制解析到CF，填写 x.com 时包含 *.x.com，适用于仅ipv4访问或多CDN负载均衡的站点
