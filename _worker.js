@@ -9,7 +9,7 @@ const TEST_PATH = '/doh'; //纯净无ech转发记录
 
 // --- 静态配置 ---
 const TWITTER_DOMAINS = ["twimg.com", "twitter.com", "x.com", "t.co"]; //您可以添加某域名强制解析到CF，填写 x.com 时包含 *.x.com，适用于仅ipv4访问或多CDN负载均衡的站点
-const DEFAULT_TWITTER_IP = "103.192.179.132";
+const DEFAULT_TWITTER_IP = "103.219.194.43";
 const META_ECH_CONFIG = "AEj+DQBEAQAgACAdd+scUi0IYFsXnUIU7ko2Nd9+F8M26pAGZVpz/KrWPgAEAAEAAWQVZWNoLXB1YmxpYy5hdG1ldGEuY29tAAA=";
 
 // --- CIDR 数据区 ---
