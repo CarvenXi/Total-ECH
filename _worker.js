@@ -44,12 +44,12 @@ async function handleRequest(request, env, ctx) {
     const url = new URL(request.url);
 
     if (url.pathname === API_PATH) {
-        const config = {
-            ip4: url.searchParams.get('ip4'),
-            ip6: url.searchParams.get('ip6'),
-            cfDomain: url.searchParams.get('cf'),
-            echDomain: url.searchParams.get('ech') || 'cloudflare-ech.com'
-        };
+const config = {
+    ip4: url.searchParams.get('ip4') || request.headers.get('X-Ip4'),
+    ip6: url.searchParams.get('ip6') || request.headers.get('X-Ip6'),
+    cfDomain: url.searchParams.get('cf') || request.headers.get('X-CF'),
+    echDomain: url.searchParams.get('ech') || request.headers.get('X-ECH') || 'cloudflare-ech.com'
+};
 
         if (request.method === 'POST') {
             const rawBuffer = await request.arrayBuffer();
